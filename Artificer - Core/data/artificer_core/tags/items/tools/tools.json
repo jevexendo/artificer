@@ -1,0 +1,15 @@
+{
+	"values":[
+		"#mythic:tools/weapons",
+		"#mythic:tools/pickaxes",
+		"#mythic:tools/axes",
+		"#mythic:tools/shovels",
+		"#mythic:tools/hoes",
+		
+		"minecraft:flint_and_steel",
+		"minecraft:fishing_rod",
+		"minecraft:shears",
+		"minecraft:shield",
+		"minecraft:carrot_on_a_stick"
+	]
+}

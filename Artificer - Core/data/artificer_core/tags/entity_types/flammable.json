@@ -1,0 +1,17 @@
+{
+	"values": [
+    "#mythic:arrows",
+		"#mythic:illagers",
+		"#mythic:neutral",
+		"#mythic:passive",
+		"#mythic:zombies",
+		"minecraft:creeper",
+		"minecraft:guardian",
+		"minecraft:phantom",
+		"minecraft:silverfish",
+		"minecraft:skeleton",
+		"minecraft:slime",
+		"minecraft:stray",
+		"minecraft:witch"
+	]
+} 
