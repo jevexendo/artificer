@@ -17,7 +17,7 @@ execute unless data entity @s SelectedItem run replaceitem block -29999999 0 160
 data modify storage artificer_durability:temp object set from block -29999999 0 1601 Items[0]
 
 # Generate new random number
-function artificer_durability:utility/random/random_number
+function artificer_core:random/random_number
 
 # Calculate unbreaking
 scoreboard players set $temp_9 dur.data 100
@@ -28,8 +28,8 @@ scoreboard players operation $temp_9 dur.data /= $temp_10 dur.data
 
 # Add item damage
 execute positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Init:1b}} }]} run function artificer_durability:durability/handle_item_init
-execute if score $rand_0 mrc_random <= $temp_9 dur.data positioned -29999999 0 1601 if block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}} }]} run function artificer_durability:durability/handle_item_unbreakable
-execute if score $rand_0 mrc_random <= $temp_9 dur.data positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}} }]} run function artificer_durability:durability/force_handle_item_durability
+execute if score $rand_0 ar.random <= $temp_9 dur.data positioned -29999999 0 1601 if block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}} }]} run function artificer_durability:durability/handle_item_unbreakable
+execute if score $rand_0 ar.random <= $temp_9 dur.data positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}} }]} run function artificer_durability:durability/force_handle_item_durability
 data modify block -29999999 0 1601 Items[0] set from storage artificer_durability:temp object
 
 # Place offhand into storage for data manipulation
