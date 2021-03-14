@@ -6,6 +6,7 @@
 ###################################################################################
 
 # Create scoreboard objectives
+scoreboard objectives add dur.damage dummy
 scoreboard objectives add dur.data dummy
 
 # Load storage default parameters

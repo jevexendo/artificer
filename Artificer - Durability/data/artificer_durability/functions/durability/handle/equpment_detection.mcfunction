@@ -10,8 +10,7 @@
 scoreboard players set $temp_7 dur.data 0
 
 # Detect if player has mainhand or offhand items
-execute as @s[tag=!dealt_damage] if data entity @s SelectedItem.Count run function artificer_durability:durability/process_mainhand
-execute as @s[tag=dealt_damage] if data entity @s SelectedItem.Count run function artificer_durability:durability/damage_mainhand
+execute as @s if data entity @s SelectedItem.Count run function artificer_durability:durability/process_mainhand
 execute as @s if data entity @s Inventory[{Slot:-106b}].Count run function artificer_durability:durability/process_offhand
 
 # Detect what armor pieces the player is wearing
