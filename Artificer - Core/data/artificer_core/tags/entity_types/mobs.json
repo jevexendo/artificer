@@ -1,7 +1,7 @@
 {
 	"values": [
-		"#mythic:passive",
-		"#mythic:neutral",
-		"#mythic:hostile"
+		"#artificer_core:passive",
+		"#artificer_core:neutral",
+		"#artificer_core:hostile"
 	]
 } 

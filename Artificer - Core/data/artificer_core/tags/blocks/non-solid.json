@@ -1,13 +1,13 @@
 {
 	"values":[
-		"#mythic:air",
-		"#mythic:colors/beds",
-		"#mythic:plants",
-		"#mythic:colors/glass_panes",
-		"#mythic:heads",
-		"#mythic:fence_gates",
-		"#mythic:trapdoors",
-		"#mythic:pressure_plates",
+		"#artificer_core:air",
+		"#artificer_core:colors/beds",
+		"#artificer_core:plants",
+		"#artificer_core:colors/glass_panes",
+		"#artificer_core:heads",
+		"#artificer_core:fence_gates",
+		"#artificer_core:trapdoors",
+		"#artificer_core:pressure_plates",
 		
 		"#minecraft:banners",
 		"#minecraft:anvil",

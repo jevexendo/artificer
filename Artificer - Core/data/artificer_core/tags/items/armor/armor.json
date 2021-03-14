@@ -1,8 +1,8 @@
 {
 	"values":[
-		"#mythic:armor/helmets",
-		"#mythic:armor/chestplates",
-		"#mythic:armor/leggings",
-		"#mythic:armor/boots"
+		"#artificer_core:armor/helmets",
+		"#artificer_core:armor/chestplates",
+		"#artificer_core:armor/leggings",
+		"#artificer_core:armor/boots"
 	]
 }

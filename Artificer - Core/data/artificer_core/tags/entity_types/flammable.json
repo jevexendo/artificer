@@ -1,10 +1,10 @@
 {
 	"values": [
-    "#mythic:arrows",
-		"#mythic:illagers",
-		"#mythic:neutral",
-		"#mythic:passive",
-		"#mythic:zombies",
+    "#artificer_core:arrows",
+		"#artificer_core:illagers",
+		"#artificer_core:neutral",
+		"#artificer_core:passive",
+		"#artificer_core:zombies",
 		"minecraft:creeper",
 		"minecraft:guardian",
 		"minecraft:phantom",

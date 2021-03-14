@@ -1,7 +1,7 @@
 {
 	"values":[
-		"#mythic:colors/glass_panes",
-		"#mythic:trapdoors",
+		"#artificer_core:colors/glass_panes",
+		"#artificer_core:trapdoors",
 		"#minecraft:slabs",
 		"#minecraft:stairs",
 		"#minecraft:fences",

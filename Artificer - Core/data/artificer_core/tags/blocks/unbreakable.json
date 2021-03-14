@@ -1,7 +1,7 @@
 {
 	"values":[
-		"#mythic:air",
-		"#mythic:command_blocks",
+		"#artificer_core:air",
+		"#artificer_core:command_blocks",
 		"minecraft:bedrock",
 		"minecraft:barrier",
 		"minecraft:structure_block",

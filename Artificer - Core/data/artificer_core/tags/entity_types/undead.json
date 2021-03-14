@@ -1,7 +1,7 @@
 {
 	"values": [
-		"#mythic:zombies",
-		"#mythic:skeletons",
+		"#artificer_core:zombies",
+		"#artificer_core:skeletons",
 		"minecraft:phantom"
 	]
 } 
