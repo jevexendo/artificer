@@ -21,6 +21,8 @@
 		"minecraft:repeater",
 		"minecraft:snow",
 		"minecraft:stone_pressure_plate",
+    "minecraft:soul_torch",
+    "minecraft:soul_wall_torch",
 		"minecraft:torch",
 		"minecraft:tripwire",
 		"minecraft:void_air",
