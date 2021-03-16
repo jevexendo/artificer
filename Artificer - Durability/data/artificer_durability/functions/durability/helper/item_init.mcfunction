@@ -5,16 +5,11 @@
 #
 ###################################################################################
 
-#Indicate items have been modified and need to be restored
-scoreboard players set $temp_7 dur.data 1
+# Clear init trigger
+scoreboard players set @s dur.itemInit 0
 
 # Place mainhand into storage for data manipulation
-data modify storage mythic:temp var set from entity @s SelectedItem
-data modify storage mythic:temp var.Slot set value 0b
-
-# Move storage to shulker box for manipulation
-data merge block -29999999 0 1601 {Items:[]}
-data modify block -29999999 0 1601 Items append from storage mythic:temp var
+data modify block -29999999 0 1601 Items append from entity @s SelectedItem
 execute unless data entity @s SelectedItem run replaceitem block -29999999 0 1601 container.0 minecraft:barrier{GUI:1b}
 data modify storage artificer_durability:temp object set from block -29999999 0 1601 Items[0]
 
