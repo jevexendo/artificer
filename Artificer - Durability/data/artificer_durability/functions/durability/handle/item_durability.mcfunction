@@ -17,7 +17,7 @@ execute store result score $temp_3 dur.data run data get storage artificer_durab
 execute store result score $temp_4 dur.data run data get storage artificer_durability:temp object.tag.Durability.CustomMax
 
 # Add custom damage total
-execute as @s if score @s dur.damage matches 1.. run function artificer_durability:durability/handle/forced_damage
+execute as @s if score @s dur.damage matches 1.. run function artificer_durability:durability/handle/item_damage
 
 # Change durability value
 scoreboard players operation $temp_1 dur.data -= $temp_2 dur.data

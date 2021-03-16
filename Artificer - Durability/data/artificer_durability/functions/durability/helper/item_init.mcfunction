@@ -1,8 +1,7 @@
 ###################################################################################
 #
-# Author: ICY - Datapack Utilities
-# Edited By: Jevex
-# Description: Update mainhand durability
+# Author: Jevex
+# Description: Initialize item custom durability bar and attributes manually
 #
 ###################################################################################
 
@@ -10,6 +9,13 @@
 scoreboard players set $temp_7 dur.data 1
 
 # Place mainhand into storage for data manipulation
+data modify storage mythic:temp var set from entity @s SelectedItem
+data modify storage mythic:temp var.Slot set value 0b
+
+# Move storage to shulker box for manipulation
+data merge block -29999999 0 1601 {Items:[]}
+data modify block -29999999 0 1601 Items append from storage mythic:temp var
+execute unless data entity @s SelectedItem run replaceitem block -29999999 0 1601 container.0 minecraft:barrier{GUI:1b}
 data modify storage artificer_durability:temp object set from block -29999999 0 1601 Items[0]
 
 # Add item damage
@@ -25,3 +31,7 @@ data modify block -29999999 0 1601 Items[0].tag.display.Lore[-1] set from block 
 # Destroy item if broken
 execute if score $out_0 dur.data matches 0 run replaceitem block -29999999 0 1601 container.0 minecraft:barrier{GUI:1b}
 execute at @s if score $out_0 dur.data matches 0 run playsound minecraft:entity.item.break player @s
+
+# Return item to player
+data remove block -29999999 0 1601 Items.[{tag:{GUI:1b}}]
+loot replace entity @s weapon.mainhand mine -29999999 0 1601 minecraft:air{drop_contents:1b}

@@ -6,8 +6,7 @@
 #
 ###################################################################################
 
-# Load items into storage if not already there
-execute if score $temp_7 dur.data matches 0 run function artificer_core:player_data/get_equipment
+#Indicate items have been modified and need to be restored
 scoreboard players set $temp_7 dur.data 1
 
 # Place chestplate into storage for data manipulation

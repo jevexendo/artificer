@@ -6,7 +6,10 @@
 #
 ###################################################################################
 
-# Set flag to indicate player needs to have inventory stored if necessary
+# Get player equipment to check for item updates
+execute as @s run function artificer_core:player_data/get_equipment
+
+# Clear indicator that items need to be restored
 scoreboard players set $temp_7 dur.data 0
 
 # Detect if player has mainhand or offhand items
