@@ -15,9 +15,9 @@ execute as @a[scores={dur.itemRepair=1..}] run function artificer_durability:dur
 
 
 # Give player trigger access if in admin mode
-scoreboard players set @a dur.itemDamage 0
-scoreboard players set @a dur.itemInit 0
-scoreboard players set @a dur.itemRepair 0
+execute as @a run trigger dur.itemDamage set 0
+execute as @a run trigger dur.itemInit set 0
+execute as @a run trigger dur.itemRepair set 0
 
 execute as @a[predicate=artificer_core:player_state/admin_mode] run scoreboard players enable @s dur.itemDamage
 execute as @a[predicate=artificer_core:player_state/admin_mode] run scoreboard players enable @s dur.itemInit
