@@ -39,7 +39,7 @@ Item Tags:
 > `#artificer_core:weapons` | All items whose primary purpose is to deal damage
 
 ## Artificer - Durability
-The following is an overview of Artificer Durability features. For proper usage explanations, please refer to the wiki page.
+The following is an overview of Artificer Durability features. For proper usage explanations, please refer to the wiki.
 
 Artificer Durability allows for the user to define custom durability values for any item in the game that has a durability bar. This means that typically low-durability items such as leather armor can be given thousands of durability points should the user wish.
 
