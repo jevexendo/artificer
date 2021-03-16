@@ -5,9 +5,6 @@
 		"#artificer_core:plants",
 		"#artificer_core:colors/glass_panes",
 		"#artificer_core:heads",
-		"#artificer_core:fence_gates",
-		"#artificer_core:trapdoors",
-		"#artificer_core:pressure_plates",
 		
 		"#minecraft:banners",
 		"#minecraft:anvil",
@@ -20,6 +17,9 @@
 		"#minecraft:doors",
 		"#minecraft:carpets",
 		"#minecraft:fences",
+    "#minecraft:fence_gates",
+    "#minecraft:trapdoors",
+    "#minecraft:pressure_plates",
 		
 		"minecraft:chorus_plant",
 		"minecraft:chorus_flower",

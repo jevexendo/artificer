@@ -1,7 +1,9 @@
 {
 	"values":[
 		"#artificer_core:air",
-		"#artificer_core:command_blocks",
+		"minecraft:command_block",
+		"minecraft:chain_command_block",
+		"minecraft:repeating_command_block",
 		"minecraft:bedrock",
 		"minecraft:barrier",
 		"minecraft:structure_block",
