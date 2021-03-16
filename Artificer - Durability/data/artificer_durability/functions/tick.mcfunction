@@ -10,8 +10,8 @@ execute as @a[advancements={artificer_core:player/inventory_changed=true}] run f
 
 # Run helper functions if triggers were used
 execute as @a[scores={dur.itemDamage=1..}] run function artificer_durability:durability/helper/item_damage
-execute as @a[scores={dur.item_init=1..}] run function artificer_durability:durability/helper/item_init
-execute as @a[scores={dur.item_repair=1..}] run function artificer_durability:durability/helper/item_repair
+execute as @a[scores={dur.itemInit=1..}] run function artificer_durability:durability/helper/item_init
+execute as @a[scores={dur.itemRepair=1..}] run function artificer_durability:durability/helper/item_repair
 
 
 # Give player trigger access if in admin mode
