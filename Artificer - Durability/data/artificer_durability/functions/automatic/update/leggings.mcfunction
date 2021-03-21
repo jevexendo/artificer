@@ -14,13 +14,13 @@ data modify storage artificer_durability:temp object set from block -29999999 0 
 
 # Initialize item if necessary
 execute store result score $temp_0 dur.data run data get storage artificer_durability:temp object.tag.Durability.Init
-execute unless score $temp_0 dur.data matches 1 run function artificer_durability:operations/handle_init
+execute unless score $temp_0 dur.data matches 1 run function artificer_durability:operations/general/handle_init
 
 # Update durability values
 function artificer_durability:operations/automatic/update_durability
 
 # If item is not broken update lore
-execute if score $out_0 dur.data matches 0 run function artificer_durability:operations/handle_lore
+execute if score $out_0 dur.data matches 0 run function artificer_durability:operations/general/handle_lore
 
 # Store item back in shulker box to finalize update
 data modify block -29999999 0 1601 Items[3] set from storage artificer_durability:temp object

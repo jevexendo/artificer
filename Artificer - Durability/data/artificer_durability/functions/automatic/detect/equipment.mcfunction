@@ -7,7 +7,7 @@
 ###################################################################################
 
 # Get player equipment to check for item updates
-execute as @s run function artificer_core:player_data/get_equipment
+execute as @s run function artificer_core:storage/get/equipment
 
 # Clear indicator that items need to be restored
 scoreboard players set $restore_inv dur.status 0
@@ -23,4 +23,4 @@ execute as @s if data block -29999999 0 1601 Items[{Slot:4b}].tag.Damage run fun
 execute as @s if data block -29999999 0 1601 Items[{Slot:5b}].tag.Damage run function artificer_durability:automatic/detect/has_helmet
 
 # Reload player inventory if it was stored and adjusted
-execute as @s if score $restore_inv dur.status matches 1 run function artificer_core:player_data/restore_equipment
+execute as @s if score $restore_inv dur.status matches 1 run function artificer_core:storage/restore/equipment

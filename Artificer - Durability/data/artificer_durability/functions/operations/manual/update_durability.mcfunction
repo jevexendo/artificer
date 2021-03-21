@@ -9,6 +9,8 @@
 # Set broken status to false
 scoreboard players set $out_0 dur.data 1
 
+# If item has unbreaking (and true_damage is false) update custom damage total
+
 # Load item data for manipulation
 execute store result score $temp_0 dur.data run data get storage artificer_durability:temp object.tag.Durability.Custom
 execute store result score $temp_1 dur.data run data get storage artificer_durability:temp object.tag.Durability.Damage
@@ -18,12 +20,6 @@ execute store result score $temp_4 dur.data run data get storage artificer_durab
 
 # Find difference between last damage value and current damage value
 scoreboard players operation $temp_1 dur.data -= $temp_2 dur.data
-
-# If custom damage is specified increase damage total on weapon
-execute as @s if score @s dur.damage matches 1.. run function artificer_durability:automatic/handle/item_damage
-
-# If custom repair is specified decrease damage total on weapon
-execute as @s if score @s dur.repair matches 1.. run function artificer_durability:automatic/handle/item_repair
 
 # Increase or decrease custom durability total based on difference between last damage value and current damage value
 scoreboard players operation $temp_0 dur.data += $temp_1 dur.data
