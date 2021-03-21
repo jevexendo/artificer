@@ -26,5 +26,5 @@ execute if score $out_0 dur.data matches 0 run function artificer_durability:ope
 data modify block -29999999 0 1601 Items[1] set from storage artificer_durability:temp object
 
 # Destroy item if broken
-execute if score $out_0 dur.data matches 1 run replaceitem block -29999999 0 1601 container.0 minecraft:barrier{GUI:1b}
+execute if score $out_0 dur.data matches 1 run replaceitem block -29999999 0 1601 container.1 minecraft:barrier{GUI:1b}
 execute at @s if score $out_0 dur.data matches 1 run playsound minecraft:entity.item.break player @s
