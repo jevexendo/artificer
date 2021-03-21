@@ -15,4 +15,4 @@ execute if score $rand_0 ar.random <= $temp_8 dur.data run scoreboard players ad
 scoreboard players remove @s dur.damage 1
 
 # Run operation again if damage total is still greater than one
-execute if score @s dur.damage matches 1.. run function artificer_durability:durability/handle/unbreaking/loop
+execute if score @s dur.damage matches 1.. run function artificer_durability:automatic/handle/unbreaking/loop

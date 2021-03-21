@@ -11,6 +11,7 @@ scoreboard objectives add dur.data dummy
 scoreboard objectives add dur.itemDamage trigger
 scoreboard objectives add dur.itemInit trigger
 scoreboard objectives add dur.itemRepair trigger
+scoreboard objectives add dur.manual dummy
 scoreboard objectives add dur.repair dummy
 
 # Load storage default parameters

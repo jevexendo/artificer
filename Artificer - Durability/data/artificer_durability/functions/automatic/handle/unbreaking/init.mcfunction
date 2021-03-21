@@ -14,4 +14,4 @@ scoreboard players operation $temp_8 dur.data /= $temp_9 dur.data
 
 # Determine amount of damage negated
 scoreboard players set #actual dur.damage 0
-execute as @s run function artificer_durability:durability/handle/unbreaking/loop
+execute as @s run function artificer_durability:automatic/handle/unbreaking/loop

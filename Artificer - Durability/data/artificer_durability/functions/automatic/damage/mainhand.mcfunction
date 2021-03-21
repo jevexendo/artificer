@@ -13,9 +13,9 @@ scoreboard players set $temp_7 dur.data 1
 data modify storage artificer_durability:temp object set from block -29999999 0 1601 Items[0]
 
 # Add item damage
-execute positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Init:1b}}}]} run function artificer_durability:durability/handle/item_init
-execute positioned -29999999 0 1601 if block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}}}]} run function artificer_durability:durability/handle/item_unbreakable
-execute positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}}}]} run function artificer_durability:durability/handle/item_durability
+execute positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Init:1b}}}]} run function artificer_durability:automatic/handle/item_init
+execute positioned -29999999 0 1601 if block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}}}]} run function artificer_durability:automatic/handle/item_unbreakable
+execute positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}}}]} run function artificer_durability:automatic/handle/item_durability
 data modify block -29999999 0 1601 Items[0] set from storage artificer_durability:temp object
 
 # Place offhand into storage for data manipulation

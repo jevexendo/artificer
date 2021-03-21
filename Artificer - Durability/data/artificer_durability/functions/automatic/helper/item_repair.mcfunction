@@ -1,23 +1,23 @@
 ###################################################################################
 #
 # Author: Jevex
-# Description: Trigger damaging an item and updating it
+# Description: Trigger repairing an item and updating it
 #
 ###################################################################################
 
-# Clear damage trigger
-scoreboard players operation @s dur.damage = @s dur.itemDamage
-scoreboard players set @s dur.itemDamage 0
+# Clear repair trigger
+scoreboard players operation @s dur.repair = @s dur.itemRepair
+scoreboard players set @s dur.itemRepair 0
 
 # Place mainhand into storage for data manipulation
 data modify block -29999999 0 1601 Items append from entity @s SelectedItem
 execute unless data entity @s SelectedItem run replaceitem block -29999999 0 1601 container.0 minecraft:barrier{GUI:1b}
 data modify storage artificer_durability:temp object set from block -29999999 0 1601 Items[0]
 
-# Damage item
-execute positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Init:1b}}}]} run function artificer_durability:durability/handle/item_init
-execute positioned -29999999 0 1601 if block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}}}]} run function artificer_durability:durability/handle/item_unbreakable
-execute positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}}}]} run function artificer_durability:durability/handle/item_durability
+# Tepair item
+execute positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Init:1b}}}]} run function artificer_durability:automatic/handle/item_init
+execute positioned -29999999 0 1601 if block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}}}]} run function artificer_durability:automatic/handle/item_unbreakable
+execute positioned -29999999 0 1601 unless block ~ ~ ~ green_shulker_box{Items:[{Slot:0b,tag:{Durability:{Actual:0}}}]} run function artificer_durability:automatic/handle/item_durability
 data modify block -29999999 0 1601 Items[0] set from storage artificer_durability:temp object
 
 # Place offhand into storage for data manipulation
