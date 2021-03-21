@@ -6,6 +6,8 @@
 #
 ###################################################################################
 
+say @a true
+
 # Check if durability matches expected value
 execute store result score $temp_0 dur.data run data get block -29999999 0 1601 Items[4].tag.Damage
 execute store result score $temp_1 dur.data run data get block -29999999 0 1601 Items[4].tag.Durability.Damage
