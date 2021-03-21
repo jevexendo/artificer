@@ -3,6 +3,7 @@
 # Author: ICY - Datapack Utilities
 # Edited By: Jevex
 # Description: Initialize item custom durability attributes if unset
+# Note: Operates on whatever item is stored in "artificer_durability:temp" object
 #
 ###################################################################################
 
@@ -99,8 +100,12 @@ execute if data storage artificer_durability:temp object{tag:{Unbreakable:1b}} r
 execute unless data storage artificer_durability:temp object.tag.Durability.CustomMax run data modify storage artificer_durability:temp object.tag.Durability.CustomMax set from storage artificer_durability:temp object.tag.Durability.ActualMax
 execute unless data storage artificer_durability:temp object.tag.Durability.Custom run data modify storage artificer_durability:temp object.tag.Durability.Custom set from storage artificer_durability:temp object.tag.Durability.CustomMax
 
+# Store durability values to scoreboard
+execute store result score $temp_0 dur.data run data get storage artificer_durability:temp object.tag.Durability.Custom
+execute store result score $temp_1 dur.data run data get storage artificer_durability:temp object.tag.Durability.CustomMax
+
 # Assign item lore to indicate durability
-data merge block -29999999 0 1602 {Text1:'[{"text":" "}]',Text2:'[{"text":"Durability: ","color":"#6B6B6B","italic":false},{"nbt":"Items[0].tag.Durability.Custom","block":"-29999999 0 1601","color":"#6B6B6B","italic":false},{"text":"/","color":"#6B6B6B","italic":false},{"nbt":"Items[0].tag.Durability.CustomMax","block":"-29999999 0 1601","color":"#6B6B6B","italic":false}]'}
+data merge block -29999999 0 1602 {Text1:'[{"text":" "}]',Text2:'[{"text":"Durability: ","color":"#6B6B6B","italic":false},{"score":{"name":"$temp_0","objective":"dur.data"},"color":"#6B6B6B","italic":false},{"text":"/","color":"#6B6B6B","italic":false},{"score":{"name":"$temp_1","objective":"dur.data"},"color":"#6B6B6B","italic":false}]'}
 execute unless data storage artificer_durability:temp object.tag.display.Lore run data modify storage artificer_durability:temp object.tag.display.Lore set value []
 data modify storage artificer_durability:temp object.tag.display.Lore append from block -29999999 0 1602 Text1
 data modify storage artificer_durability:temp object.tag.display.Lore append from block -29999999 0 1602 Text2
