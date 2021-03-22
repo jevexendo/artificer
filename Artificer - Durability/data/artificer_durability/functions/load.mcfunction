@@ -6,22 +6,22 @@
 ###################################################################################
 
 # Reset objectives
-scoreboard objectives remove dur.custom
-scoreboard objectives remove dur.data
-scoreboard objectives remove dur.status
+scoreboard objectives remove du.custom
+scoreboard objectives remove du.data
+scoreboard objectives remove du.status
 
 # Create scoreboard objectives
-scoreboard objectives add dur.custom dummy
-scoreboard objectives add dur.data dummy
-scoreboard objectives add dur.status dummy
+scoreboard objectives add du.custom dummy
+scoreboard objectives add du.data dummy
+scoreboard objectives add du.status dummy
 
 # Pre-load default scores
-scoreboard players set $slot dur.custom 0
-scoreboard players set $durability_max dur.custom 0
-scoreboard players set $full_repair dur.custom 0
-scoreboard players set $durability dur.custom 0
-scoreboard players set $true_durability dur.custom 0
-scoreboard players set $true_damage dur.custom 0
+scoreboard players set $slot du.custom 0
+scoreboard players set $durability_max du.custom 0
+scoreboard players set $full_repair du.custom 0
+scoreboard players set $durability du.custom 0
+scoreboard players set $true_durability du.custom 0
+scoreboard players set $true_damage du.custom 0
 
 # Load storage default parameters
 data merge storage artificer_durability:temp {list:[],object:{},var:0}

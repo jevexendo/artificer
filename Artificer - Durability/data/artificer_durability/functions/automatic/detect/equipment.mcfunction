@@ -10,7 +10,7 @@
 execute as @s run function artificer_core:storage/get/equipment
 
 # Clear indicator that items need to be restored
-scoreboard players set $restore_inv dur.status 0
+scoreboard players set $restore_inv du.status 0
 
 # Detect if player has mainhand or offhand items
 execute as @s if data block -29999999 0 1601 Items[{Slot:0b}].tag.Damage run function artificer_durability:automatic/detect/has_mainhand
@@ -23,4 +23,4 @@ execute as @s if data block -29999999 0 1601 Items[{Slot:4b}].tag.Damage run fun
 execute as @s if data block -29999999 0 1601 Items[{Slot:5b}].tag.Damage run function artificer_durability:automatic/detect/has_helmet
 
 # Reload player inventory if it was stored and adjusted
-execute as @s if score $restore_inv dur.status matches 1 run function artificer_core:storage/restore/equipment
+execute as @s if score $restore_inv du.status matches 1 run function artificer_core:storage/restore/equipment
