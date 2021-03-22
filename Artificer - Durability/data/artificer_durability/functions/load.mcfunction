@@ -5,11 +5,6 @@
 #
 ###################################################################################
 
-# Reset objectives
-scoreboard objectives remove du.custom
-scoreboard objectives remove du.data
-scoreboard objectives remove du.status
-
 # Create scoreboard objectives
 scoreboard objectives add du.custom dummy
 scoreboard objectives add du.data dummy
