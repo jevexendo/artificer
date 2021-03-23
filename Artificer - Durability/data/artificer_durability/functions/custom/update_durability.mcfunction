@@ -15,8 +15,8 @@ execute as @s if score $slot du.custom matches 0..8 run function artificer_durab
 execute as @s if score $slot du.custom matches 9..35 run function artificer_durability:custom/get/inventory
 
 # DEBUG MESSAGE
-#execute as @s if score $debug ar.data matches 1 unless score $slot du.custom matches 100..103 unless score $slot du.custom matches 106 unless score $slot du.custom matches -106 unless score $slot du.custom matches 0..8 unless score $slot du.custom matches 9..35 run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" tried to modify durability of invalid slot: ","color":"yellow"},{"score":{"name":"$slot","objective":"du.custom"},"color":"gold"},{"text":"b","color":"gold"}]
-execute as @s if score @s ar.debug matches 1 run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Updating durability of item in slot: ","color":"yellow"},{"score":{"name":"$slot","objective":"du.custom"},"color":"gold"},{"text":"b","color":"gold"}]
+#execute as @s if score $debug ar.data matches 1.. unless score $slot du.custom matches 100..103 unless score $slot du.custom matches 106 unless score $slot du.custom matches -106 unless score $slot du.custom matches 0..8 unless score $slot du.custom matches 9..35 run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" tried to modify durability of invalid slot: ","color":"yellow"},{"score":{"name":"$slot","objective":"du.custom"},"color":"gold"},{"text":"b","color":"gold"}]
+execute as @s if score @s ar.debug matches 1.. run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Updating durability of item in slot: ","color":"yellow"},{"score":{"name":"$slot","objective":"du.custom"},"color":"gold"},{"text":"b","color":"gold"}]
 
 
 
@@ -28,7 +28,7 @@ execute unless score $temp_0 du.data matches 1 run function artificer_durability
 function artificer_durability:operations/custom/update_durability
 
 # DEBUG MESSAGE
-execute as @s if score @s ar.debug matches 1 run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Item broken: ","color":"yellow"},{"score":{"name":"$out_0","objective":"du.data"},"color":"gold"},{"text":"b","color":"gold"}]
+execute as @s if score @s ar.debug matches 2.. run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Item broken: ","color":"yellow"},{"score":{"name":"$out_0","objective":"du.data"},"color":"gold"},{"text":"b","color":"gold"}]
 
 # If item is not broken update lore
 execute if score $out_0 du.data matches 0 run function artificer_durability:operations/general/handle_lore
