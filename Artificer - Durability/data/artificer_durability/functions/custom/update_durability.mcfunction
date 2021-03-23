@@ -34,7 +34,7 @@ execute as @s if score @s ar.debug matches 2.. run tellraw @a ["",{"text":"[Debu
 execute if score $out_0 du.data matches 0 run function artificer_durability:operations/general/handle_lore
 
 # Destroy item if broken
-execute if score $out_0 du.data matches 1 run data merge storage artificer_durability:temp {object:{id:"minecraft:air"}}
+execute if score $out_0 du.data matches 1 run data merge storage artificer_durability:temp {object:{id:"minecraft:barrier",tag:{GUI:1b}}}
 execute at @s if score $out_0 du.data matches 1 run playsound minecraft:entity.item.break player @s
 
 
