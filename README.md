@@ -41,8 +41,8 @@ Item Tags:
 ## Artificer - Durability
 The following is an overview of Artificer Durability features. For proper usage explanations, please refer to the wiki: https://github.com/JevexEndo/Artificer/wiki/Artificer-Durability.
 
-Artificer Durability allows for the user to define custom durability values for any item in the game that has a durability bar. This means that typically low-durability items such as leather armor can be given thousands of durability points should the user wish.
+Artificer Durability allows for the user to define custom durability values for any item in the game. This means that typically low-durability items such as leather armor can be given thousands of durability points should the user wish.
 
 The system updates the durability bar of items to reflect the artificial durability values chosen by the user and also provides updated numberical values of item durability in lore text so that players are able to see if an item's durability value has been modified and by what amount.
 
-Another benefit of this custom durability handler is the ability to modify the durability of items directly with commands. This functionality currently only applies to items held in the player's mainhand, but will be extended to cover offhand and armor slots in future versions.
+Another benefit of this custom durability handler is the ability to modify the durability of items directly with commands. The system for doing so is quite flexible and enables a wide variety of situations just by using the settings provided.
