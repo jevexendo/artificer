@@ -14,6 +14,7 @@ scoreboard objectives add du.status dummy
 scoreboard players add $durability du.custom 0
 scoreboard players add $durability_max du.custom 0
 scoreboard players add $full_repair du.custom 0
+scoreboard players add $keep_settings du.custom 0
 scoreboard players add $slot du.custom 0
 scoreboard players add $true_damage du.custom 0
 scoreboard players add $true_durability du.custom 0
