@@ -1,11 +1,11 @@
 ###################################################################################
 #
 # Author: Jevex
-# Description: Reset custom variables
+# Description: Reset custom settings
 #
 ###################################################################################
 
-# Reset scoreboard variables
+# Reset scoreboard settings
 scoreboard players set $durability du.custom 0
 scoreboard players set $durability_max du.custom 0
 scoreboard players set $full_repair du.custom 0

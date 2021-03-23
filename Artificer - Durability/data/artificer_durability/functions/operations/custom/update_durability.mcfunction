@@ -44,7 +44,7 @@ scoreboard players operation $temp_1 du.data -= $temp_2 du.data
 # Increase or decrease custom durability total based on difference between last damage value and current damage value
 scoreboard players operation $temp_0 du.data += $temp_1 du.data
 
-# Change durability to specified amount
+# If true durability is enabled, set durability to specified amount
 execute if score $true_durability du.custom matches 1 run scoreboard players operation $temp_0 du.data = $durability du.custom
 
 # DEBUG MESSAGE

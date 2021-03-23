@@ -48,5 +48,5 @@ execute as @s if score $slot du.custom matches 100..103 run function artificer_d
 execute as @s if score $slot du.custom matches 0..8 run function artificer_durability:custom/restore/hotbar
 execute as @s if score $slot du.custom matches 9..35 run function artificer_durability:custom/restore/inventory
 
-# If keep variables is false, reset variables
-execute if score $keep_variables du.custom matches 0 run function artificer_durability:custom/reset_variables
+# If keep settings is false, reset settings
+execute if score $keep_settings du.custom matches 0 run function artificer_durability:custom/reset_settings
