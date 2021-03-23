@@ -11,7 +11,7 @@
 data modify storage artificer_durability:temp object.tag.Durability.Init set value 1b
 
 # Set default initialization values
-data modify storage artificer_durability:temp object.tag.Durability.ActualMax set value 0
+data modify storage artificer_durability:temp object.tag.Durability.ActualMax set value 1
 data modify storage artificer_durability:temp object.tag.Durability.Damage set value 0
 
 # Set weapon and tool base durability
@@ -95,9 +95,6 @@ execute if data storage artificer_durability:temp object{id:"minecraft:elytra"} 
 execute if data storage artificer_durability:temp object{id:"minecraft:crossbow"} run data modify storage artificer_durability:temp object.tag.Durability.ActualMax set value 326
 execute if data storage artificer_durability:temp object{id:"minecraft:turtle_helmet"} run data modify storage artificer_durability:temp object.tag.Durability.ActualMax set value 275
 execute if data storage artificer_durability:temp object{tag:{Unbreakable:1b}} run data modify storage artificer_durability:temp object.tag.Durability.ActualMax set value 0
-
-# Catch non-durability items
-execute unless data storage artificer_durability:temp object.tag.Durability.ActualMax run data modify storage artificer_durability:temp object.tag.Durability.ActualMax set value 1
 
 # If custom durability settings are not included, assign default parameters
 execute unless data storage artificer_durability:temp object.tag.Durability.CustomMax run data modify storage artificer_durability:temp object.tag.Durability.CustomMax set from storage artificer_durability:temp object.tag.Durability.ActualMax
