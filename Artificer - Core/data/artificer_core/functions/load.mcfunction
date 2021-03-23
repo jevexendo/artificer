@@ -14,6 +14,7 @@ gamerule maxCommandChainLength 1000000
 
 # Create scoreboard objectives
 scoreboard objectives add ar.data dummy
+scoreboard objectives add ar.debug dummy
 scoreboard objectives add ar.health health {"text":"❤","color":"red"}
 scoreboard objectives add ar.number dummy
 scoreboard objectives add ar.random dummy

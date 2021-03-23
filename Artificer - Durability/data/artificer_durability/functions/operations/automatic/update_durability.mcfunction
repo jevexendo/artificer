@@ -9,6 +9,8 @@
 # Set broken status to false
 scoreboard players set $out_0 du.data 0
 
+# If item has unbreaking (and unbreaking is enabled) calculate new durability amount
+
 # Load item data for manipulation
 execute store result score $temp_0 du.data run data get storage artificer_durability:temp object.tag.Durability.Custom
 execute store result score $temp_1 du.data run data get storage artificer_durability:temp object.tag.Durability.Damage
@@ -46,4 +48,4 @@ execute store result storage artificer_durability:temp object.tag.Damage int 1 r
 execute store result storage artificer_durability:temp object.tag.Durability.Damage int 1 run data get storage artificer_durability:temp object.tag.Damage
 
 # Set broken status to true
-execute if score $temp_0 du.data matches ..-1 run scoreboard players set $out_0 du.data 1
+execute if score $temp_0 du.data matches ..0 run scoreboard players set $out_0 du.data 1
