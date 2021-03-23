@@ -96,6 +96,9 @@ execute if data storage artificer_durability:temp object{id:"minecraft:crossbow"
 execute if data storage artificer_durability:temp object{id:"minecraft:turtle_helmet"} run data modify storage artificer_durability:temp object.tag.Durability.ActualMax set value 275
 execute if data storage artificer_durability:temp object{tag:{Unbreakable:1b}} run data modify storage artificer_durability:temp object.tag.Durability.ActualMax set value 0
 
+# Catch non-durability items
+execute unless data storage artificer_durability:temp object.tag.Durability.ActualMax run data modify storage artificer_durability:temp object.tag.Durability.ActualMax set value 1
+
 # If custom durability settings are not included, assign default parameters
 execute unless data storage artificer_durability:temp object.tag.Durability.CustomMax run data modify storage artificer_durability:temp object.tag.Durability.CustomMax set from storage artificer_durability:temp object.tag.Durability.ActualMax
 execute unless data storage artificer_durability:temp object.tag.Durability.Custom run data modify storage artificer_durability:temp object.tag.Durability.Custom set from storage artificer_durability:temp object.tag.Durability.CustomMax
