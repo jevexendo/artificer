@@ -7,7 +7,7 @@
 ###################################################################################
 
 # Set broken status to false
-scoreboard players set $out_0 du.data 1
+scoreboard players set $out_0 du.data 0
 
 # If item has unbreaking (and true_damage is false) update custom damage total
 execute if score $durability du.custom matches ..-1 if score $true_damage du.custom matches 0 run function artificer_durability:operations/custom/unbreaking/init
@@ -69,9 +69,15 @@ scoreboard players operation $temp_3 du.data -= $temp_5 du.data
 # Ensure durability is always at least 8 points above breaking
 execute if score $temp_3 du.data > $temp_6 du.data run scoreboard players operation $temp_3 du.data = $temp_6 du.data
 
+# DEBUG MESSAGE
+tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Storing damage to item: ","color":"yellow"},{"score":{"name":"$temp_3","objective":"du.data"},"color":"gold"}]
+
 # Store damage back onto item
 execute store result storage artificer_durability:temp object.tag.Damage int 1 run scoreboard players get $temp_3 du.data
 execute store result storage artificer_durability:temp object.tag.Durability.Damage int 1 run data get storage artificer_durability:temp object.tag.Damage
+
+# DEBUG MESSAGE
+tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Item final durability: ","color":"yellow"},{"score":{"name":"$temp_0","objective":"du.data"},"color":"gold"}]
 
 # Set broken status to true
 execute if score $temp_0 du.data matches ..0 run scoreboard players set $out_0 du.data 0
