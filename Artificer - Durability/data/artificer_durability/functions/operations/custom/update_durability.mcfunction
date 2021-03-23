@@ -80,4 +80,4 @@ execute store result storage artificer_durability:temp object.tag.Durability.Dam
 execute as @s if score @s ar.debug matches 2.. run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Item final durability: ","color":"yellow"},{"score":{"name":"$temp_0","objective":"du.data"},"color":"gold"}]
 
 # Set broken status to true
-execute if score $temp_0 du.data matches ..0 run scoreboard players set $out_0 du.data 0
+execute if score $temp_0 du.data matches ..0 run scoreboard players set $out_0 du.data 1
