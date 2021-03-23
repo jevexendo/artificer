@@ -27,6 +27,9 @@ execute unless score $temp_0 du.data matches 1 run function artificer_durability
 # Update durability values
 function artificer_durability:operations/custom/update_durability
 
+# DEBUG MESSAGE
+execute as @s if score @s ar.debug matches 1 run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Item broken: ","color":"yellow"},{"score":{"name":"$out_0","objective":"du.data"},"color":"gold"},{"text":"b","color":"gold"}]
+
 # If item is not broken update lore
 execute if score $out_0 du.data matches 0 run function artificer_durability:operations/general/handle_lore
 
