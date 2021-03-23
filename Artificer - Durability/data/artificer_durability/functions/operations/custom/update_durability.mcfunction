@@ -18,6 +18,7 @@ execute store result score $temp_1 du.data run data get storage artificer_durabi
 execute store result score $temp_2 du.data run data get storage artificer_durability:temp object.tag.Damage
 execute store result score $temp_3 du.data run data get storage artificer_durability:temp object.tag.Durability.ActualMax
 execute store result score $temp_4 du.data run data get storage artificer_durability:temp object.tag.Durability.CustomMax
+tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Item damage: ","color":"yellow"},{"score":{"name":"$temp_2","objective":"du.data"},"color":"gold"}]
 
 # If changing max durability, update now
 execute if score $durability_max du.custom matches 1.. run scoreboard players operation $temp_4 du.data = $durability_max du.custom
@@ -28,6 +29,7 @@ execute if score $full_repair du.custom matches 1.. run scoreboard players set $
 
 # Change durability by specificied amount
 execute if score $true_durability du.custom matches 0 run scoreboard players operation $temp_2 du.data -= $durability du.custom
+tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Updated item damage: ","color":"yellow"},{"score":{"name":"$temp_2","objective":"du.data"},"color":"gold"}]
 
 # Find difference between last damage value and current damage value
 scoreboard players operation $temp_1 du.data -= $temp_2 du.data
@@ -37,6 +39,7 @@ scoreboard players operation $temp_0 du.data += $temp_1 du.data
 
 # Change durability to specified amount
 execute if score $true_durability du.custom matches 1 run scoreboard players operation $temp_0 du.data = $durability du.custom
+tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Updating durability of item to: ","color":"yellow"},{"score":{"name":"$temp_0","objective":"du.data"},"color":"gold"}]
 
 # If custom durability > max custom durability, set custom durability equal to max
 execute if score $temp_0 du.data > $temp_4 du.data run scoreboard players operation $temp_0 du.data = $temp_4 du.data
