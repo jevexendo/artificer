@@ -30,7 +30,7 @@ execute if score $durability_max du.custom matches 1.. run scoreboard players op
 execute if score $durability_max du.custom matches 1.. store result storage artificer_durability:temp object.tag.Durability.CustomMax int 1 run scoreboard players get $temp_4 du.data
 
 # Fully repair item
-execute if score $full_repair du.custom matches 1.. run scoreboard players set $temp_2 du.data 0
+execute if score $full_repair du.custom matches 1 run scoreboard players operation $temp_0 du.data = $temp_4 du.data
 
 # Change durability by specificied amount
 execute if score $true_durability du.custom matches 0 run scoreboard players operation $temp_2 du.data -= $durability du.custom
