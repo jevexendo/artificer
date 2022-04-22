@@ -18,4 +18,4 @@ scoreboard players add $durability du.custom 1
 execute if score $durability du.custom matches 0 run scoreboard players operation $durability du.custom -= $temp_1 du.data
 
 # Run operation again if damage total is still greater than one
-execute if score $durability du.custom matches ..-1 run function artificer_durability:automatic/handle/unbreaking/loop
+execute if score $durability du.custom matches ..-1 run function artificer_durability:operations/automatic/handle/unbreaking/loop

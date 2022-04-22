@@ -20,4 +20,5 @@ scoreboard players add $true_damage du.custom 0
 scoreboard players add $true_durability du.custom 0
 
 # Load storage default parameters
+data merge storage artificer_durability:data {item:{}}
 data merge storage artificer_durability:temp {list:[],object:{},var:0}

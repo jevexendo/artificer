@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "./Artificer - Core"
+        },
+        {
+            "path": "./Artificer - Durability"
+        }
+    ],
+    "settings": {
+        "datapack.env.cmdVersion":"1.17",
+        "datapack.env.jsonVersion": "1.17"
+    }
+}
