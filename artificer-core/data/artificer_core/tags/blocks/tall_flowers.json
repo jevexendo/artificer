@@ -1,8 +1,8 @@
 {
-	"values":[
+	"values": [
 		"minecraft:lilac",
-		"minecraft:rose_bush",
 		"minecraft:peony",
+		"minecraft:rose_bush",
 		"minecraft:sunflower"
 	]
 }

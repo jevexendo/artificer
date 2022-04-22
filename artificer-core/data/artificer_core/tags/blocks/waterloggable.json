@@ -1,0 +1,22 @@
+{
+	"values": [
+		"#artificer_core:colors/glass_panes",
+		"#minecraft:coral_plants",
+		"#minecraft:fences",
+		"#minecraft:signs",
+		"#minecraft:slabs",
+		"#minecraft:stairs",
+		"#minecraft:trapdoors",
+		"#minecraft:walls",
+		"minecraft:campfire",
+		"minecraft:chest",
+		"minecraft:ender_chest",
+		"minecraft:iron_bars",
+		"minecraft:ladder",
+		"minecraft:scaffolding",
+		"minecraft:sea_pickle",
+		"minecraft:seagrass",
+		"minecraft:tall_seagrass",
+		"minecraft:trapped_chest"
+	]
+}

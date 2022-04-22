@@ -10,11 +10,11 @@ The following modules are currently available:
 Artificer Core is primarilly meant to be a utility module for use by other Artificer modules. However, it can be used independently of any other modules to provide access to a variety of useful block, entity, and item tags. The following is a series of non-exhaustive lists of available tags for each category.
 
 Block Tags:
-> `#artificer_core:non-solid` | Blocks that are not full blocks but that cannot be moved through
+> `#artificer_core:non_solid` | Blocks that are not full blocks but that cannot be moved through
 > 
 > `#artificer_core:passable` | Blocks that can be passed through with some or no obstruction to movement
 > 
-> `#artificer_core:water-loggable` | Blocks that have the waterlogged block state
+> `#artificer_core:waterloggable` | Blocks that have the waterlogged block state
 
 Entity Tags:
 > `#artificer_core:flammable` | Entities that are able to burn

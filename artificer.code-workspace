@@ -1,14 +1,27 @@
 {
     "folders": [
         {
-            "path": "./Artificer - Core"
+            "path": ".",
+            "name": "Workspace"
         },
         {
-            "path": "./Artificer - Durability"
+            "path": "./artificer-core",
+            "name": "Artificer - Core"
+        },
+        {
+            "path": "./artificer-durability",
+            "name": "Artificer - Durability"
         }
     ],
     "settings": {
-        "datapack.env.cmdVersion":"1.17",
-        "datapack.env.jsonVersion": "1.17"
+        "datapack.env.cmdVersion": "1.17",
+        "datapack.env.jsonVersion": "1.17",
+        "editor.formatOnSave": true,
+    },
+    "extensions": {
+        "recommendations": [
+            "arcensoth.language-mcfunction",
+            "SPGoding.datapack-language-server"
+        ]
     }
 }
