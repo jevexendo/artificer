@@ -1,16 +1,16 @@
 {
     "folders": [
         {
-            "path": ".",
-            "name": "Workspace"
-        },
-        {
             "path": "./artificer-core",
             "name": "Artificer - Core"
         },
         {
             "path": "./artificer-durability",
             "name": "Artificer - Durability"
+        },
+        {
+            "path": ".",
+            "name": "Workspace"
         }
     ],
     "settings": {
