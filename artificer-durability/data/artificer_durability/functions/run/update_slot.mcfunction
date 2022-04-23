@@ -1,4 +1,4 @@
-#> artificer_durability:cmd/update_slot
+#> artificer_durability:run/update_slot
 #
 #> Description:
 #   API function to initialize and update item durability data
@@ -34,4 +34,4 @@ execute at @s if score $out_0 du.data matches 1 run playsound minecraft:entity.i
 function artificer_durability:clipboard/paste/slot
 
 # If keep settings is false, reset settings
-execute if score $keep_settings du.custom matches 0 run function artificer_durability:custom/reset_settings
+execute if score $keep_settings du.custom matches 0 run function artificer_durability:run/reset_settings

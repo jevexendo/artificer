@@ -1,4 +1,4 @@
-#> artificer_durability:cmd/reset_settings
+#> artificer_durability:run/reset_settings
 #
 #> Description:
 #   Reset durability editor parameters to default

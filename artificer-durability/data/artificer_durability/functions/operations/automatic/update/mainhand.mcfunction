@@ -10,8 +10,7 @@ scoreboard players set $restore_inv du.status 1
 data modify storage artificer_durability:clipboard Item set from block -29999999 0 1601 Items[0]
 
 # Initialize item if necessary
-execute store result score $temp_0 du.data run data get storage artificer_durability:clipboard Item.tag.Durability.Init
-execute unless score $temp_0 du.data matches 1 run function artificer_durability:operations/general/handle_init
+execute unless data storage artificer_durability:clipboard Item.tag.Durability{Init:1b} run function artificer_durability:operations/general/handle_init
 
 # Update durability values
 function artificer_durability:operations/automatic/update_durability
