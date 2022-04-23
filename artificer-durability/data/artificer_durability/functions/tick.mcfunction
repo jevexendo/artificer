@@ -1,9 +1,7 @@
-###################################################################################
+#> artificer_durability:tick
 #
-# Author: Jevex
-# Description: Game loop function that handles Artificer - Durability operations
-#
-###################################################################################
+#> Description: 
+#   Run regular module operations
 
 # Check if inventory was updated, if so then determine if item durability needs to be updated
 execute as @a[advancements={artificer_core:player/inventory_changed=true}] run function artificer_durability:operations/automatic/detect/root

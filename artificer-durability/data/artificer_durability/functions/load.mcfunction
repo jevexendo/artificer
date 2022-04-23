@@ -1,9 +1,7 @@
-###################################################################################
+#> artificer_durability:load
 #
-# Author: Jevex
-# Description: Generates Artificer Durability scoreboards and objectives
-#
-###################################################################################
+#> Description:
+#   Generate module scoreboards and objectives
 
 # Create scoreboard objectives
 scoreboard objectives add du.custom dummy
@@ -20,5 +18,4 @@ scoreboard players add $true_damage du.custom 0
 scoreboard players add $true_durability du.custom 0
 
 # Load storage default parameters
-data merge storage artificer_durability:data {item:{}}
-data merge storage artificer_durability:temp {list:[],object:{},var:0}
+data merge storage artificer_durability:clipboard {Item: {}}

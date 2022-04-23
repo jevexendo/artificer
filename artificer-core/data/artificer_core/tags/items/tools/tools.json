@@ -1,11 +1,10 @@
 {
-	"values":[
+	"values": [
 		"#artificer_core:tools/weapons",
 		"#artificer_core:tools/pickaxes",
 		"#artificer_core:tools/axes",
 		"#artificer_core:tools/shovels",
 		"#artificer_core:tools/hoes",
-		
 		"minecraft:flint_and_steel",
 		"minecraft:fishing_rod",
 		"minecraft:shears",

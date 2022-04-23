@@ -1,13 +1,15 @@
-###################################################################################
+#> artificer_core:load
 #
-# Author: Jevex
-# Description: Generates Artificer Core scoreboards and objectives
+#> Description 
+#   Generates core module scoreboards and objectives, then schedules module processing order
 #
-###################################################################################
-
-# IMPORTANT NOTES:
-# Attribute Modifier UUIDs:
-# /attribute @s minecraft:generic.max_health modifier add 06865616-0c74-0685-0f62-007566666572 health_buffer 5 add
+#> Attributes
+#   Attribute Modifier UUIDs:
+#   /attribute @s minecraft:generic.max_health modifier add 06865616-0c74-0685-0f62-007566666572 health_buffer 5 add
+#
+#> Tags
+#   admin - show debugging information and allow access to admin zones
+#   full_access - remove all gameplay restrictions on actions by this individual
 
 # Setup gamerules
 gamerule maxCommandChainLength 1000000
@@ -41,12 +43,8 @@ execute in minecraft:the_nether unless block -29999999 0 1601 green_shulker_box 
 execute in minecraft:the_nether unless block -29999999 0 1602 oak_wall_sign run setblock -29999999 0 1602 minecraft:oak_wall_sign[facing=south]
 
 # Load storage default parameters
-data merge storage artificer_core:temp {list:[],object:{},var:0}
+data merge storage artificer_core:temp {list: [], object: {}, var: 0}
 
 # Schedule all functions required for datapack operations
 schedule function artificer_durability:tick 1t
 schedule function artificer_core:tick 1t
-
-# Tags
-# admin - show debugging information and allow access to admin zones
-# full_access - remove all gameplay restrictions on actions by this individual

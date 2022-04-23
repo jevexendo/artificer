@@ -1,9 +1,7 @@
-###################################################################################
+#> artificer_core:random/random_number
 #
-# Author: Jevex
-# Description: Generates a pseudo-random number using a Linear Congruential Generator
-#
-###################################################################################
+#> Description 
+#   Generates a pseudo-random number using a Linear Congruential Generator
 
 # Compute Random Number
 scoreboard players operation $seed_0 ar.random *= $seed_1 ar.random

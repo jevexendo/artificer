@@ -1,10 +1,7 @@
-###################################################################################
+#> artificer_durability:operations/automatic/update_durability
 #
-# Author: ICY - Datapack Utilities
-# Edited By: Jevex
-# Description: Master function to assign item durability
-#
-###################################################################################
+#> Description
+#   Main function to configure item durability
 
 # Set broken status to false
 scoreboard players set $out_0 du.data 0
@@ -12,11 +9,11 @@ scoreboard players set $out_0 du.data 0
 # If item has unbreaking (and unbreaking is enabled) calculate new durability amount
 
 # Load item data for manipulation
-execute store result score $temp_0 du.data run data get storage artificer_durability:data item.tag.Durability.Custom
-execute store result score $temp_1 du.data run data get storage artificer_durability:data item.tag.Durability.Damage
-execute store result score $temp_2 du.data run data get storage artificer_durability:data item.tag.Damage
-execute store result score $temp_3 du.data run data get storage artificer_durability:data item.tag.Durability.ActualMax
-execute store result score $temp_4 du.data run data get storage artificer_durability:data item.tag.Durability.CustomMax
+execute store result score $temp_0 du.data run data get storage artificer_durability:clipboard Item.tag.Durability.Custom
+execute store result score $temp_1 du.data run data get storage artificer_durability:clipboard Item.tag.Durability.Damage
+execute store result score $temp_2 du.data run data get storage artificer_durability:clipboard Item.tag.Damage
+execute store result score $temp_3 du.data run data get storage artificer_durability:clipboard Item.tag.Durability.ActualMax
+execute store result score $temp_4 du.data run data get storage artificer_durability:clipboard Item.tag.Durability.CustomMax
 
 # Find difference between last damage value and current damage value
 scoreboard players operation $temp_1 du.data -= $temp_2 du.data
@@ -28,7 +25,7 @@ scoreboard players operation $temp_0 du.data += $temp_1 du.data
 execute if score $temp_0 du.data > $temp_4 du.data run scoreboard players operation $temp_0 du.data = $temp_4 du.data
 
 # Store updated custom durability back on item
-execute store result storage artificer_durability:data item.tag.Durability.Custom int 1 run scoreboard players get $temp_0 du.data
+execute store result storage artificer_durability:clipboard Item.tag.Durability.Custom int 1 run scoreboard players get $temp_0 du.data
 
 # Assign base variables
 scoreboard players operation $temp_5 du.data = $temp_3 du.data
@@ -44,8 +41,8 @@ scoreboard players operation $temp_3 du.data -= $temp_5 du.data
 execute if score $temp_3 du.data > $temp_6 du.data run scoreboard players operation $temp_3 du.data = $temp_6 du.data
 
 # Store damage back onto item
-execute store result storage artificer_durability:data item.tag.Damage int 1 run scoreboard players get $temp_3 du.data
-execute store result storage artificer_durability:data item.tag.Durability.Damage int 1 run data get storage artificer_durability:data item.tag.Damage
+execute store result storage artificer_durability:clipboard Item.tag.Damage int 1 run scoreboard players get $temp_3 du.data
+execute store result storage artificer_durability:clipboard Item.tag.Durability.Damage int 1 run data get storage artificer_durability:clipboard Item.tag.Damage
 
 # Set broken status to true
 execute if score $temp_0 du.data matches ..0 run scoreboard players set $out_0 du.data 1

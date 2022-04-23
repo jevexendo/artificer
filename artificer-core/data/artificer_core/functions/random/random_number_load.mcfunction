@@ -1,12 +1,10 @@
-###################################################################################
+#> artificer_core:random/random_number_load
 #
-# Author: Jevex
-# Description: Seed values for prng numbers
-#
-###################################################################################
+#> Description 
+#   Seed values for prng numbers
 
 # Get values from area effect cloud UUID
-summon area_effect_cloud 0 0 0 {Tags:["lcg_seed"]}
+summon area_effect_cloud 0 0 0 {Tags: ["lcg_seed"]}
 execute store result score $seed_0 ar.random run data get entity @e[type=minecraft:area_effect_cloud,tag=lcg_seed,limit=1] UUID[0]
 execute store result score $seed_1 ar.random run data get entity @e[type=minecraft:area_effect_cloud,tag=lcg_seed,limit=1] UUID[1]
 execute store result score $seed_2 ar.random run data get entity @e[type=minecraft:area_effect_cloud,tag=lcg_seed,limit=1] UUID[2]

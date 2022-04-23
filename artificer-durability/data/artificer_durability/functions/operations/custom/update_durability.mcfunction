@@ -1,33 +1,30 @@
-###################################################################################
+#> artificer_durability:operations/custom/update_durability
 #
-# Author: ICY - Datapack Utilities
-# Edited By: Jevex
-# Description: Master function to assign item durability
-#
-###################################################################################
+#> Description
+#   Master function to assign item durability
 
 # Set broken status to false
 scoreboard players set $out_0 du.data 0
 
 # If item has unbreaking (and true_damage is false) update custom damage total
-execute as @s if score $durability du.custom matches ..-1 if score $true_damage du.custom matches 0 if data storage artificer_durability:data item.tag.Enchantments[{id:"minecraft:unbreaking"}].lvl run function artificer_durability:operations/custom/unbreaking/init
+execute as @s if score $durability du.custom matches ..-1 if score $true_damage du.custom matches 0 if data storage artificer_durability:clipboard Item.tag.Enchantments[{id: "minecraft:unbreaking"}].lvl run function artificer_durability:operations/custom/unbreaking/calculate
 
 # DEBUG MESSAGE
 execute as @s if score @s ar.debug matches 2.. run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Durability change: ","color":"yellow"},{"score":{"name":"$durability","objective":"du.custom"},"color":"gold"}]
 
 # Load item data for manipulation
-execute store result score $temp_0 du.data run data get storage artificer_durability:data item.tag.Durability.Custom
-execute store result score $temp_1 du.data run data get storage artificer_durability:data item.tag.Durability.Damage
-execute store result score $temp_2 du.data run data get storage artificer_durability:data item.tag.Damage
-execute store result score $temp_3 du.data run data get storage artificer_durability:data item.tag.Durability.ActualMax
-execute store result score $temp_4 du.data run data get storage artificer_durability:data item.tag.Durability.CustomMax
+execute store result score $temp_0 du.data run data get storage artificer_durability:clipboard Item.tag.Durability.Custom
+execute store result score $temp_1 du.data run data get storage artificer_durability:clipboard Item.tag.Durability.Damage
+execute store result score $temp_2 du.data run data get storage artificer_durability:clipboard Item.tag.Damage
+execute store result score $temp_3 du.data run data get storage artificer_durability:clipboard Item.tag.Durability.ActualMax
+execute store result score $temp_4 du.data run data get storage artificer_durability:clipboard Item.tag.Durability.CustomMax
 
 # DEBUG MESSAGE
 execute as @s if score @s ar.debug matches 2.. run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Item damage: ","color":"yellow"},{"score":{"name":"$temp_2","objective":"du.data"},"color":"gold"}]
 
 # If changing max durability, update now
 execute if score $durability_max du.custom matches 1.. run scoreboard players operation $temp_4 du.data = $durability_max du.custom
-execute if score $durability_max du.custom matches 1.. store result storage artificer_durability:data item.tag.Durability.CustomMax int 1 run scoreboard players get $temp_4 du.data
+execute if score $durability_max du.custom matches 1.. store result storage artificer_durability:clipboard Item.tag.Durability.CustomMax int 1 run scoreboard players get $temp_4 du.data
 
 # Fully repair item
 execute if score $full_repair du.custom matches 1 run scoreboard players operation $temp_0 du.data = $temp_4 du.data
@@ -54,7 +51,7 @@ execute as @s if score @s ar.debug matches 2.. run tellraw @a ["",{"text":"[Debu
 execute if score $temp_0 du.data > $temp_4 du.data run scoreboard players operation $temp_0 du.data = $temp_4 du.data
 
 # Store updated custom durability back on item
-execute store result storage artificer_durability:data item.tag.Durability.Custom int 1 run scoreboard players get $temp_0 du.data
+execute store result storage artificer_durability:clipboard Item.tag.Durability.Custom int 1 run scoreboard players get $temp_0 du.data
 
 # Assign base variables
 scoreboard players operation $temp_5 du.data = $temp_3 du.data
@@ -73,8 +70,8 @@ execute if score $temp_3 du.data > $temp_6 du.data run scoreboard players operat
 execute as @s if score @s ar.debug matches 2.. run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Storing damage to item: ","color":"yellow"},{"score":{"name":"$temp_3","objective":"du.data"},"color":"gold"}]
 
 # Store damage back onto item
-execute store result storage artificer_durability:data item.tag.Damage int 1 run scoreboard players get $temp_3 du.data
-execute store result storage artificer_durability:data item.tag.Durability.Damage int 1 run data get storage artificer_durability:data item.tag.Damage
+execute store result storage artificer_durability:clipboard Item.tag.Damage int 1 run scoreboard players get $temp_3 du.data
+execute store result storage artificer_durability:clipboard Item.tag.Durability.Damage int 1 run data get storage artificer_durability:clipboard Item.tag.Damage
 
 # DEBUG MESSAGE
 execute as @s if score @s ar.debug matches 2.. run tellraw @a ["",{"text":"[Debug]","color":"red"},{"text":" > "},{"selector":"@s","color":"dark_aqua"},{"text":" Item final durability: ","color":"yellow"},{"score":{"name":"$temp_0","objective":"du.data"},"color":"gold"}]

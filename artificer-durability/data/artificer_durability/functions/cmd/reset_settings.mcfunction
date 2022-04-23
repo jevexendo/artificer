@@ -1,9 +1,7 @@
-###################################################################################
+#> artificer_durability:cmd/reset_settings
 #
-# Author: Jevex
-# Description: Reset custom settings
-#
-###################################################################################
+#> Description:
+#   Reset durability editor parameters to default
 
 # Reset scoreboard settings
 scoreboard players set $durability du.custom 0

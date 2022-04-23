@@ -15,8 +15,7 @@
     ],
     "settings": {
         "datapack.env.cmdVersion": "1.17",
-        "datapack.env.jsonVersion": "1.17",
-        "editor.formatOnSave": true,
+        "datapack.env.jsonVersion": "1.17"
     },
     "extensions": {
         "recommendations": [

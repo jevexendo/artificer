@@ -1,10 +1,7 @@
-###################################################################################
+#> artificer_durability:operations/automatic/detect/has_offhand
 #
-# Author: ICY - Datapack Utilities
-# Edited By: Jevex
-# Description: Detect if durability has changed since last check
-#
-###################################################################################
+#> Description
+#   Detect if durability has changed since last check
 
 # Check if durability matches expected value
 execute store result score $temp_0 du.data run data get block -29999999 0 1601 Items[1].tag.Damage

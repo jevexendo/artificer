@@ -1,10 +1,7 @@
-###################################################################################
+#> artificer_core:tick
 #
-# Author: Jevex
-# Date: December 21, 2020
-# Description: Game loop function that handles Artificer Core operations
-#
-###################################################################################
+#> Description
+#   Game loop function that handles core module operations
 
 advancement revoke @a[advancements={artificer_core:player/inventory_changed=true}] only artificer_core:player/inventory_changed
 
