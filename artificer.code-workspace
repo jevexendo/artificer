@@ -1,0 +1,25 @@
+{
+    "folders": [
+        {
+            "path": "./artificer",
+            "name": "Artificer Datapack"
+        },
+        {
+            "path": ".",
+            "name": "Workspace"
+        }
+    ],
+    "settings": {
+        "datapack.env.cmdVersion": "1.16",
+        "datapack.env.dataVersion": "1.16.5",
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "**/Thumbs.db": true,
+            "artificer": false
+        }
+    }
+}
