@@ -6,7 +6,6 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "artificer-core": true,
-        "artificer-durability": true
+        "artificer": true,
     }
 }

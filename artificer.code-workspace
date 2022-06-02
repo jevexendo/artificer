@@ -1,12 +1,8 @@
 {
     "folders": [
         {
-            "path": "./artificer-core",
-            "name": "Artificer - Core"
-        },
-        {
-            "path": "./artificer-durability",
-            "name": "Artificer - Durability"
+            "path": "./artificer",
+            "name": "Artificer Datapack"
         },
         {
             "path": ".",
@@ -15,7 +11,16 @@
     ],
     "settings": {
         "datapack.env.cmdVersion": "1.17",
-        "datapack.env.jsonVersion": "1.17"
+        "datapack.env.jsonVersion": "1.17",
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "**/Thumbs.db": true,
+            "artificer": false,
+        }
     },
     "extensions": {
         "recommendations": [
