@@ -20,9 +20,9 @@
             "editor.semanticHighlighting.enabled": true,
             "editor.tabSize": 2
         },
-        "datapack.env.cmdVersion": "1.17",
-        "datapack.env.dataVersion": "1.17",
-        "datapack.env.jsonVersion": "1.17",
+        "datapack.env.cmdVersion": "1.18.2",
+        "datapack.env.dataVersion": "1.18.2",
+        "datapack.env.jsonVersion": "1.18.2",
         "editor.formatOnSave": true,
         "files.exclude": {
             "**/.git": true,
